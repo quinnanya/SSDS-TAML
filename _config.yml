@@ -26,8 +26,8 @@ repository:
   # path_to_book: docs
 
 launch_buttons:
-  # binderhub_url: https://mybinder.org/v2/gh/EastBayEv/SSDS-TAML/HEAD
-  # notebook_interface: "classic"
+  binderhub_url: https://mybinder.org/v2/gh/EastBayEv/SSDS-TAML/HEAD
+  notebook_interface: "jupyterhub"
   thebe: true
 
 # Add GitHub buttons to your book
