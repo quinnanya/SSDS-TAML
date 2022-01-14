@@ -12,7 +12,7 @@
 
 **Bio:** Dr. Qingkai Kong is a staff scientist at Lawrence Livermore National Laboratory working on machine learning in geosciences. He was a PhD student and an assistant researcher at Berkeley Seismology Lab and is one of the inventors that developed the MyShake project. He later worked as a visiting researcher at Google to help launch the Android Earthquake Alerting System. Currently, his research interests are in combining machine learning with physics knowledge in the domain of seismology. 
 
-**Link to slideshow:** https://github.com/EastBayEv/SSDS-TAML/blob/master/docs/Kong_2022_earthquakes.pdf
+**Link to slideshow:** https://github.com/EastBayEv/earthquakes/blob/main/Kong_2022_earthquakes.pdf
 
 ## Looking ahead
 
