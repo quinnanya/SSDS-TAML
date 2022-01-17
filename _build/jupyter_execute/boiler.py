@@ -1,9 +1,9 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# ![boiler](img/boiler.jpg)
-
 # # Boilerplate code
+
+# ![boiler](img/boiler.jpg)
 
 # Below are just a few examples for some common tasks you will need to accomplish for saving and importing data.
 
