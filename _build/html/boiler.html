@@ -282,6 +282,11 @@
   <a class="reference internal nav-link" href="#error-messages">
    Error messages
   </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id1">
+   Challenge
+  </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#syntax-errors">
@@ -8433,39 +8438,33 @@ subscribe to our email newsletter to hear about new eBooks.
 <h2>Error messages<a class="headerlink" href="#error-messages" title="Permalink to this headline">¶</a></h2>
 <p>Python’s learning curve can feel creative and beyond frustrating at the same time. Just remember that everyone encounters errors - lots of them. When you do, start debugging by investigating the type of error message you receive.</p>
 <p>Scroll to the end of the error message and read the last line to find the type of error.</p>
+</div>
+<div class="section" id="id1">
+<h2>Challenge<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<ol class="simple">
+<li><p>Open JupyterLab</p></li>
+<li><p>Unhashtag the lines of code below, run them, and inspect the errors.</p></li>
+</ol>
 <div class="section" id="syntax-errors">
 <h3>Syntax errors<a class="headerlink" href="#syntax-errors" title="Permalink to this headline">¶</a></h3>
+<p><strong>Invalid syntax</strong></p>
+<p>You have entered something python does not understand.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">### invalid entry</span>
-<span class="n">x</span> <span class="mi">89</span> <span class="mi">5</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">  File</span><span class="nn"> &quot;&lt;ipython-input-15-2fa2fc1c19e0&gt;&quot;</span><span class="gt">, line </span><span class="mi">2</span>
-    <span class="n">x</span> <span class="mi">89</span> <span class="mi">5</span>
-      <span class="o">^</span>
-<span class="ne">SyntaxError</span>: invalid syntax
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># x 89 5</span>
 </pre></div>
 </div>
 </div>
 </div>
+<p><strong>Indentation</strong></p>
+<p>Your indentation does not conform to the rules</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">### indentation</span>
-<span class="k">def</span> <span class="nf">example</span><span class="p">():</span>
-    <span class="n">test</span> <span class="o">=</span> <span class="s2">&quot;this is an example function&quot;</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">test</span><span class="p">)</span>
-     <span class="k">return</span> <span class="n">example</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">  File</span><span class="nn"> &quot;&lt;ipython-input-111-632707328759&gt;&quot;</span><span class="gt">, line </span><span class="mi">5</span>
-    <span class="k">return</span> <span class="n">example</span>
-    <span class="o">^</span>
-<span class="ne">IndentationError</span>: unexpected indent
+<span class="c1"># def example():</span>
+<span class="c1">#     test = &quot;this is an example function&quot;</span>
+<span class="c1">#     print(test)</span>
+<span class="c1">#      return example</span>
 </pre></div>
 </div>
 </div>
@@ -8473,75 +8472,38 @@ subscribe to our email newsletter to hear about new eBooks.
 </div>
 <div class="section" id="runtime-errors">
 <h3>Runtime errors<a class="headerlink" href="#runtime-errors" title="Permalink to this headline">¶</a></h3>
+<p><strong>Name</strong></p>
+<p>You try to call a variable you have not yet assigned</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">### Name (undefined)</span>
-<span class="c1"># You try to use a variable you haven&#39;t yet assigned</span>
-<span class="n">x</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># x</span>
 </pre></div>
 </div>
 </div>
 </div>
+<p>Or, you try to call a function from a library that you have not yet imported</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># You try to call a function from a library you have not yet imported</span>
-<span class="n">example</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>this is an example function
-</pre></div>
-</div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;function __main__.example()&gt;
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># example()</span>
 </pre></div>
 </div>
 </div>
 </div>
+<p><strong>Type</strong></p>
+<p>You write code with incompatible types</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">### Type</span>
-<span class="c1"># You write code with incompatible types</span>
-<span class="s2">&quot;5&quot;</span> <span class="o">+</span> <span class="mi">5</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">TypeError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">117</span><span class="o">-</span><span class="mi">49188</span><span class="n">af17595</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1">### Type</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="c1"># You write code with incompatible types</span>
-<span class="ne">----&gt; </span><span class="mi">3</span> <span class="s2">&quot;5&quot;</span> <span class="o">+</span> <span class="mi">5</span>
-
-<span class="ne">TypeError</span>: can only concatenate str (not &quot;int&quot;) to str
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># &quot;5&quot; + 5</span>
 </pre></div>
 </div>
 </div>
 </div>
+<p><strong>Index</strong></p>
+<p>You try to reference something that is out of range</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">### Index</span>
-<span class="c1"># You try to index something that is not there</span>
-<span class="n">my_list</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;green&#39;</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;cat&#39;</span><span class="p">,</span> <span class="s1">&#39;dog&#39;</span><span class="p">,</span> <span class="s1">&#39;pig&#39;</span><span class="p">]]</span>
-<span class="n">my_list</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">IndexError</span><span class="g g-Whitespace">                                </span>Traceback (most recent call last)
-<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">115</span><span class="o">-</span><span class="mi">4</span><span class="n">b00b0fe7c7e</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="c1"># You try to index something that is not there</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="n">my_list</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;green&#39;</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;cat&#39;</span><span class="p">,</span> <span class="s1">&#39;dog&#39;</span><span class="p">,</span> <span class="s1">&#39;pig&#39;</span><span class="p">]]</span>
-<span class="ne">----&gt; </span><span class="mi">4</span> <span class="n">my_list</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span>
-
-<span class="ne">IndexError</span>: list index out of range
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">my_list</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;green&#39;</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;cat&#39;</span><span class="p">,</span> <span class="s1">&#39;dog&#39;</span><span class="p">,</span> <span class="s1">&#39;pig&#39;</span><span class="p">]]</span>
+<span class="c1"># my_list[5]</span>
 </pre></div>
 </div>
 </div>
@@ -8549,21 +8511,11 @@ subscribe to our email newsletter to hear about new eBooks.
 </div>
 <div class="section" id="file-errors">
 <h3>File errors<a class="headerlink" href="#file-errors" title="Permalink to this headline">¶</a></h3>
+<p><strong>File not found</strong></p>
+<p>You try to import something that does not exist</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">### File not found</span>
-<span class="n">document</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;fakedocument.txt&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">FileNotFoundError</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
-<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">118</span><span class="o">-</span><span class="mi">3</span><span class="n">dad6ed04af5</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1">### File not found</span>
-<span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">document</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;fakedocument.txt&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
-
-<span class="ne">FileNotFoundError</span>: [Errno 2] No such file or directory: &#39;fakedocument.txt&#39;
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># document = open(&#39;fakedocument.txt&#39;).read()</span>
 </pre></div>
 </div>
 </div>

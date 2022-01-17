@@ -164,65 +164,88 @@ gap
 # Python's learning curve can feel creative and beyond frustrating at the same time. Just remember that everyone encounters errors - lots of them. When you do, start debugging by investigating the type of error message you receive. 
 # 
 # Scroll to the end of the error message and read the last line to find the type of error.  
+# 
+# 
+# ## Challenge
+# 
+# 1. Open JupyterLab
+# 2. Unhashtag the lines of code below, run them, and inspect the errors. 
 
 # ### Syntax errors
+
+# **Invalid syntax**
+# 
+# You have entered something python does not understand.
 
 # In[15]:
 
 
-### invalid entry
-x 89 5
+# x 89 5
 
 
-# In[111]:
+# **Indentation**
+# 
+# Your indentation does not conform to the rules
+
+# In[16]:
 
 
 ### indentation
-def example():
-    test = "this is an example function"
-    print(test)
-     return example
+# def example():
+#     test = "this is an example function"
+#     print(test)
+#      return example
 
 
 # ### Runtime errors
 
-# In[116]:
+# **Name** 
+# 
+# You try to call a variable you have not yet assigned
+
+# In[17]:
 
 
-### Name (undefined)
-# You try to use a variable you haven't yet assigned
-x
+# x
 
 
-# In[112]:
+# Or, you try to call a function from a library that you have not yet imported
+
+# In[18]:
 
 
-# You try to call a function from a library you have not yet imported
-example()
+# example()
 
 
-# In[117]:
-
-
-### Type
+# **Type**
+# 
 # You write code with incompatible types
-"5" + 5
+
+# In[19]:
 
 
-# In[115]:
+# "5" + 5
 
 
-### Index
-# You try to index something that is not there
+# **Index**
+# 
+# You try to reference something that is out of range
+
+# In[20]:
+
+
 my_list = ['green', True, 0.5, 4, ['cat', 'dog', 'pig']]
-my_list[5]
+# my_list[5]
 
 
 # ### File errors
 
-# In[118]:
+# **File not found**
+# 
+# You try to import something that does not exist
+
+# In[21]:
 
 
-### File not found
-document = open('fakedocument.txt').read()
+# document = open('fakedocument.txt').read()
 
