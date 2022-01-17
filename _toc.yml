@@ -6,6 +6,7 @@ root: intro
 chapters:
 - file: how_to
 - file: start
+- file: boiler
 - file: Jan_12
 - file: Jan 19
 - file: README.md
