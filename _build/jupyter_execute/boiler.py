@@ -4,10 +4,8 @@
 # ![boiler](img/boiler.jpg)
 
 # # Boilerplate code
-# 
-# Users can program Python to perform the same task in different ways. Below are examples for some common tasks you will need to accomplish. 
-# 
-# 
+
+# Below are just a few examples for some common tasks you will need to accomplish for saving and importing data.
 
 # ## Variable assignment
 # 
