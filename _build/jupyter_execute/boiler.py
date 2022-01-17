@@ -5,7 +5,7 @@
 
 # ![boiler](img/boiler.jpg)
 
-# Below are just a few examples for accomplishing some tasks for saving and importing data. 
+# Below are just a few examples to accomplish data saving and importing data tasks.
 
 # ## Variable assignment
 # 
