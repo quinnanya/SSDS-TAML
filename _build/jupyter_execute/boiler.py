@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# # Boilerplate code
+# # Boilerplate code review
 
 # ![boiler](img/boiler.jpg)
 
@@ -40,6 +40,7 @@ x * y / z
 
 
 # float (decimals)
+# use a decimal to create floats
 pi = 3.14
 print(type(pi))
 
@@ -48,6 +49,7 @@ print(type(pi))
 
 
 # integer (whole numbers)
+# do not use a decimal for integers
 amount = 4
 print(type(amount))
 
@@ -56,6 +58,7 @@ print(type(amount))
 
 
 # string (text)
+# wrap text data in quotations
 welcome = "Welcome to Stanford Libraries"
 print(type(welcome))
 
@@ -64,7 +67,9 @@ print(type(welcome))
 
 
 # boolean (logical)
+# True or False (stored as 1 and 0)
 print(type(True))
+print(False - True)
 
 
 # ## Data structures
@@ -119,7 +124,9 @@ fruits['fruits'][1]['recipes'][0]
 
 
 frank = open('data/frankenstein.txt').read()
-print(frank)
+
+# print only the first 1000 characters
+print(frank[:1000])
 
 
 # ### Import data frames
@@ -129,19 +136,21 @@ print(frank)
 # In[11]:
 
 
-# link the pandas library to our current notebook
+# Step 1. link the pandas library to our current notebook
 import pandas as pd
 
 
 # In[12]:
 
 
+# Step 2. enter the file path in pandas's read_csv() function  
 gap = pd.read_csv("data/gapminder-FiveYearData.csv")
 
 
 # In[13]:
 
 
+# Step 3. view the data
 print(gap)
 
 
@@ -153,7 +162,7 @@ gap
 
 # ## Challenge
 # 
-# Try to import a: 
+# Open JupyterLab. Try to import a: 
 # 1. different .txt file
 # 2. different .csv file
 # 
@@ -168,8 +177,9 @@ gap
 # 
 # ## Challenge
 # 
-# 1. Open JupyterLab
-# 2. Unhashtag the lines of code below, run them, and inspect the errors. 
+# 1. In JupyterLab, unhashtag the line of code for each error message below
+# 2. Run each one
+# 3. Inspect the error messages
 
 # ### Syntax errors
 
