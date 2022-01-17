@@ -9,7 +9,11 @@
 
 # ## Variable assignment
 # 
-# Variable names should be simple and descriptive. Assign a variable by typing its name to the left of the equals sign. Whatever is written to the right of the equals sign will be saved in the variable. 
+# In Python, data are saved in variables.
+# 
+# Variable names should be simple and descriptive. 
+# 
+# Assign a variable by typing its name to the left of the equals sign. Whatever is written to the right of the equals sign will be saved in the variable. 
 # 
 # You could read this as "x is defined as four", "five is assigned to y", or "z is six".
 
