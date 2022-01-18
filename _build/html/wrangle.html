@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Launch Binder &#8212; Text Analysis and Machine Learning (TAML) Group</title>
+    <title>Data wrangling &#8212; Text Analysis and Machine Learning (TAML) Group</title>
     
   <link href="_static/css/theme.css" rel="stylesheet" />
   <link href="_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -51,7 +51,8 @@
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="prev" title="&lt;no title&gt;" href="resources.html" />
+    <link rel="next" title="Visualization essentials" href="viz.html" />
+    <link rel="prev" title="Start coding!" href="start.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -103,8 +104,8 @@
    Start coding!
   </a>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="wrangle.html">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
    Data wrangling
   </a>
  </li>
@@ -123,8 +124,8 @@
    Jan 19 - text preprocessing basics
   </a>
  </li>
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
+ <li class="toctree-l1">
+  <a class="reference internal" href="README.html">
    Launch Binder
   </a>
  </li>
@@ -169,9 +170,9 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="_sources/README.md"><button type="button"
+        <a class="dropdown-buttons" href="_sources/wrangle.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
-                data-placement="left">.md</button></a>
+                data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
         <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
             onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
@@ -189,7 +190,7 @@
                 data-toggle="tooltip" data-placement="left" title="Source repository"><i
                     class="fab fa-github"></i>repository</button></a>
         <a class="issues-button"
-            href="https://github.com/EastBayEv/SSDS-TAML/issues/new?title=Issue%20on%20page%20%2FREADME.html&body=Your%20issue%20content%20here."><button
+            href="https://github.com/EastBayEv/SSDS-TAML/issues/new?title=Issue%20on%20page%20%2Fwrangle.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
         
@@ -205,6 +206,26 @@
 
             <!-- Launch buttons -->
 
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/EastBayEv/SSDS-TAML/HEAD/v2/gh/EastBayEv/SSDS-TAML/master?urlpath=tree/wrangle.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        <button type="button" class="btn btn-secondary topbarbtn"
+            onclick="initThebeSBT()" title="Launch Thebe" data-toggle="tooltip" data-placement="left"><i
+                class="fas fa-play"></i><span style="margin-left: .4em;">Live Code</span></button>
+        
+    </div>
+</div>
+
         </div>
 
         <!-- Table of contents -->
@@ -218,9 +239,9 @@
         
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="launch-binder">
-<h1>Launch Binder<a class="headerlink" href="#launch-binder" title="Permalink to this headline">¶</a></h1>
-<p><a class="reference external" href="https://mybinder.org/v2/gh/EastBayEv/SSDS-TAML/HEAD"><img alt="Binder" src="https://mybinder.org/badge_logo.svg" /></a></p>
+  <div class="section" id="data-wrangling">
+<h1>Data wrangling<a class="headerlink" href="#data-wrangling" title="Permalink to this headline">¶</a></h1>
+<p><img alt="wrangle" src="_images/wrangle.png" /></p>
 </div>
 
     <script type="text/x-thebe-config">
@@ -253,14 +274,23 @@
 <div class='prev-next-bottom'>
     
     <div id="prev">
-        <a class="left-prev" href="resources.html" title="previous page">
+        <a class="left-prev" href="start.html" title="previous page">
             <i class="prevnext-label fas fa-angle-left"></i>
             <div class="prevnext-info">
                 <p class="prevnext-label">previous</p>
-                <p class="prevnext-title">&lt;no title&gt;</p>
+                <p class="prevnext-title">Start coding!</p>
             </div>
         </a>
     </div>
+     <div id="next">
+        <a class="right-next" href="viz.html" title="next page">
+            <div class="prevnext-info">
+                <p class="prevnext-label">next</p>
+                <p class="prevnext-title">Visualization essentials</p>
+            </div>
+            <i class="prevnext-label fas fa-angle-right"></i>
+        </a>
+     </div>
 
 </div>
         

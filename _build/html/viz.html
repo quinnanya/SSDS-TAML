@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Jan 12 &#8212; Text Analysis and Machine Learning (TAML) Group</title>
+    <title>Visualization essentials &#8212; Text Analysis and Machine Learning (TAML) Group</title>
     
   <link href="_static/css/theme.css" rel="stylesheet" />
   <link href="_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -51,8 +51,8 @@
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Jan 19 - text preprocessing basics" href="Jan%2019.html" />
-    <link rel="prev" title="Visualization essentials" href="viz.html" />
+    <link rel="next" title="Jan 12" href="Jan_12.html" />
+    <link rel="prev" title="Data wrangling" href="wrangle.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -109,13 +109,13 @@
    Data wrangling
   </a>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="viz.html">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
    Visualization essentials
   </a>
  </li>
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
+ <li class="toctree-l1">
+  <a class="reference internal" href="Jan_12.html">
    Jan 12
   </a>
  </li>
@@ -170,9 +170,9 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="_sources/Jan_12.md"><button type="button"
+        <a class="dropdown-buttons" href="_sources/viz.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
-                data-placement="left">.md</button></a>
+                data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
         <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
             onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
@@ -190,7 +190,7 @@
                 data-toggle="tooltip" data-placement="left" title="Source repository"><i
                     class="fab fa-github"></i>repository</button></a>
         <a class="issues-button"
-            href="https://github.com/EastBayEv/SSDS-TAML/issues/new?title=Issue%20on%20page%20%2FJan_12.html&body=Your%20issue%20content%20here."><button
+            href="https://github.com/EastBayEv/SSDS-TAML/issues/new?title=Issue%20on%20page%20%2Fviz.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
         
@@ -206,6 +206,26 @@
 
             <!-- Launch buttons -->
 
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/EastBayEv/SSDS-TAML/HEAD/v2/gh/EastBayEv/SSDS-TAML/master?urlpath=tree/viz.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        <button type="button" class="btn btn-secondary topbarbtn"
+            onclick="initThebeSBT()" title="Launch Thebe" data-toggle="tooltip" data-placement="left"><i
+                class="fas fa-play"></i><span style="margin-left: .4em;">Live Code</span></button>
+        
+    </div>
+</div>
+
         </div>
 
         <!-- Table of contents -->
@@ -217,18 +237,20 @@
             <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#kickoff">
-   Kickoff
+  <a class="reference internal nav-link" href="#plotting-with-seaborn">
+   Plotting with seaborn
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#first-a-note-about-matplotlib">
+     First, a note about matplotlib
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#guest-speaker">
-   Guest Speaker
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#looking-ahead">
-   Looking ahead
+  <a class="reference internal nav-link" href="#seaborn-makes-things-easier">
+   Seaborn makes things easier
   </a>
  </li>
 </ul>
@@ -242,22 +264,76 @@
         
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="jan-12">
-<h1>Jan 12<a class="headerlink" href="#jan-12" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="kickoff">
-<h2>Kickoff<a class="headerlink" href="#kickoff" title="Permalink to this headline">¶</a></h2>
-<p>2:00-2:30PM: Welcome and Introductions</p>
+  <div class="tex2jax_ignore mathjax_ignore section" id="visualization-essentials">
+<h1>Visualization essentials<a class="headerlink" href="#visualization-essentials" title="Permalink to this headline">¶</a></h1>
+<p><img alt="viz" src="_images/viz.png" /></p>
+<p>After importing data, you should examine it closely.</p>
+<ol class="simple">
+<li><p>Look at the raw data to perform rough checks of your assumptions</p></li>
+<li><p>Computer summary statistics</p></li>
+<li><p>Produce visualizations to illustrate obvious - or not so obvious - trends in the data</p></li>
+</ol>
+<div class="section" id="plotting-with-seaborn">
+<h2>Plotting with seaborn<a class="headerlink" href="#plotting-with-seaborn" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="first-a-note-about-matplotlib">
+<h3>First, a note about matplotlib<a class="headerlink" href="#first-a-note-about-matplotlib" title="Permalink to this headline">¶</a></h3>
+<p>There are many different ways to visualize data in Python but they virtually all rely on matplotlib. You should spend some time reading through the tutorial:</p>
+<p><a class="reference external" href="https://matplotlib.org/stable/tutorials/introductory/pyplot.html">https://matplotlib.org/stable/tutorials/introductory/pyplot.html</a>.</p>
+<p>Because many other libraries use matplotlib under the hood, you should familiarize yourself with the basics. For example:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="n">x</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">]</span>
+<span class="n">y</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">20</span><span class="p">]</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;title&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;some numbers&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;x-axis label&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
 </div>
-<div class="section" id="guest-speaker">
-<h2>Guest Speaker<a class="headerlink" href="#guest-speaker" title="Permalink to this headline">¶</a></h2>
-<p>2:30-3:30PM: <strong>Title:</strong> Smartphones and Twitter for Earthquakes</p>
-<p><strong>Abstract:</strong> Text analysis and machine learning are useful in many real-world applications. In this presentation, I will mainly talk about two examples I worked on, using sensors inside smartphones to detect earthquakes as well as analyze twitter data to understand the public responses after earthquakes occur. In the first example, the machine learning algorithms we developed can tell the difference between the earthquake’s motion and your daily motion, so that the phone can detect earthquakes quickly. In the second example, people’s emotion as well as the topics they were discussing after the Ridgecrest earthquakes can be inferred from the tweets, which shows the power of text analysis.</p>
-<p><strong>Bio:</strong> Dr. Qingkai Kong is a staff scientist at Lawrence Livermore National Laboratory working on machine learning in geosciences. He was a PhD student and an assistant researcher at Berkeley Seismology Lab and is one of the inventors that developed the MyShake project. He later worked as a visiting researcher at Google to help launch the Android Earthquake Alerting System. Currently, his research interests are in combining machine learning with physics knowledge in the domain of seismology.</p>
-<p><strong>Link to slideshow:</strong> <a class="reference external" href="https://github.com/EastBayEv/earthquakes/blob/main/Kong_2022_earthquakes.pdf">https://github.com/EastBayEv/earthquakes/blob/main/Kong_2022_earthquakes.pdf</a></p>
 </div>
-<div class="section" id="looking-ahead">
-<h2>Looking ahead<a class="headerlink" href="#looking-ahead" title="Permalink to this headline">¶</a></h2>
-<p>3:30-3:45PM: Preview of next session</p>
+<div class="cell_output docutils container">
+<img alt="_images/viz_4_0.png" src="_images/viz_4_0.png" />
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="seaborn-makes-things-easier">
+<h2>Seaborn makes things easier<a class="headerlink" href="#seaborn-makes-things-easier" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># import seaborn</span>
+<span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
+
+<span class="c1"># import data</span>
+<span class="n">penguins</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;data/penguins.csv&quot;</span><span class="p">)</span>
+
+<span class="n">species</span> <span class="o">=</span> <span class="n">penguins</span><span class="p">[</span><span class="s1">&#39;species&#39;</span><span class="p">]</span>
+
+<span class="c1"># make a bar graph of bill_length_mm by bill_depth_mm</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">scatterplot</span><span class="p">(</span><span class="n">data</span> <span class="o">=</span> <span class="n">penguins</span><span class="p">,</span>
+                <span class="n">x</span> <span class="o">=</span> <span class="s1">&#39;bill_length_mm&#39;</span><span class="p">,</span> 
+                <span class="n">y</span> <span class="o">=</span> <span class="s1">&#39;bill_depth_mm&#39;</span><span class="p">,</span> 
+                <span class="n">hue</span> <span class="o">=</span> <span class="s1">&#39;species&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">2</span><span class="o">-</span><span class="mi">9629</span><span class="n">fad00476</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> 
+<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="c1"># import data</span>
+<span class="ne">----&gt; </span><span class="mi">5</span> <span class="n">penguins</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;data/penguins.csv&quot;</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">6</span> 
+<span class="g g-Whitespace">      </span><span class="mi">7</span> <span class="n">species</span> <span class="o">=</span> <span class="n">penguins</span><span class="p">[</span><span class="s1">&#39;species&#39;</span><span class="p">]</span>
+
+<span class="ne">NameError</span>: name &#39;pd&#39; is not defined
+</pre></div>
+</div>
+</div>
+</div>
 </div>
 </div>
 
@@ -291,19 +367,19 @@
 <div class='prev-next-bottom'>
     
     <div id="prev">
-        <a class="left-prev" href="viz.html" title="previous page">
+        <a class="left-prev" href="wrangle.html" title="previous page">
             <i class="prevnext-label fas fa-angle-left"></i>
             <div class="prevnext-info">
                 <p class="prevnext-label">previous</p>
-                <p class="prevnext-title">Visualization essentials</p>
+                <p class="prevnext-title">Data wrangling</p>
             </div>
         </a>
     </div>
      <div id="next">
-        <a class="right-next" href="Jan%2019.html" title="next page">
+        <a class="right-next" href="Jan_12.html" title="next page">
             <div class="prevnext-info">
                 <p class="prevnext-label">next</p>
-                <p class="prevnext-title">Jan 19 - text preprocessing basics</p>
+                <p class="prevnext-title">Jan 12</p>
             </div>
             <i class="prevnext-label fas fa-angle-right"></i>
         </a>
