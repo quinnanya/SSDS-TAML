@@ -12,11 +12,13 @@ jupyter:
     name: python3
 ---
 
-```python
+# Resources
+
+<!-- #region -->
 
 
 [Pandas Data Wrangling cheatsheet](https://pandas.pydata.org/Pandas_Cheat_Sheet.pdf)
 
 [Learn HTML](https://html.com/)
 
-```
+<!-- #endregion -->
