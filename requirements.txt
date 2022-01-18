@@ -6,4 +6,4 @@ seaborn
 bs4
 nltk
 requests
-re
+regex
