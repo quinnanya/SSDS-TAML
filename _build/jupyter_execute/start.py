@@ -59,7 +59,7 @@
 
 # ![closehalt](img/close.png)
 
-# ## Local Python installation
+# Local Python installation
 # 
 # Despite the many cloud-based Python Jupyter Notebook solutions, it is always good to have a local installation on your own computer. Point your web browswer here to install Python Anaconda distribution 3.9 (as of January 2022): https://www.anaconda.com/products/individual
 # 
@@ -70,3 +70,18 @@
 # 
 # * Click the "Launch" button under either Jupyter Notebook or Jupyter Lab. 
 # * Open the `.ipynb` notebook you just downloaded from JupyterLab in your local installation and repeat the steps above.
+
+# ## Run these materials on your local computer
+# 
+# Copy these materials for use on your local installation. 
+# 
+# 1. Visit: https://github.com/EastBayEv/SSDS-TAML
+# 2. Click the green "Code" button
+# ![code](img/code.png)
+# 3. Click "Download ZIP"
+# ![zip](img/zip.png)
+# 4. Extract this folder someplace familiar such as your Desktop.
+# 5. Open Anaconda Navigator, launch JupyterLab, and navigate your directories to launch these notebooks.
+# 
+# ## git clone
+# Git users type: `git clone https://github.com/EastBayEv/SSDS-TAML.git`
