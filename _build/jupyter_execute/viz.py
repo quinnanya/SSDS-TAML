@@ -39,6 +39,7 @@ plt.show()
 
 
 # import seaborn
+import pandas as pd
 import seaborn as sns
 
 # import data
