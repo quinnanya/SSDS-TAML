@@ -186,7 +186,7 @@ top_plot.set_xticklabels(top_plot.get_xticklabels(),rotation = 40);
 
 # ## Quiz: Redwood webscraping
 # 
-# This also works with data scraped from the web. Below is very brief BeautifulSoup example to save the contexts of the Sequoioideae (redwood trees) Wikipedia page to a variable named `text`. 
+# This also works with data scraped from the web. Below is very brief BeautifulSoup example to save the contents of the Sequoioideae (redwood trees) Wikipedia page to a variable named `text`. 
 # 
 # 1. Read through the code below
 # 2. Practice by repeating for a webpage of your choice
@@ -253,5 +253,5 @@ text = text.lower()
 # In[26]:
 
 
-print(text)
+text
 
