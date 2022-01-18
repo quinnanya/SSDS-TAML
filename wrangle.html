@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Start coding! &#8212; Text Analysis and Machine Learning (TAML) Group</title>
+    <title>Data wrangling &#8212; Text Analysis and Machine Learning (TAML) Group</title>
     
   <link href="_static/css/theme.css" rel="stylesheet" />
   <link href="_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -51,8 +51,8 @@
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Boilerplate code review" href="boiler.html" />
-    <link rel="prev" title="How to use this book" href="how_to.html" />
+    <link rel="next" title="Visualization essentials" href="viz.html" />
+    <link rel="prev" title="Boilerplate code review" href="boiler.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -99,8 +99,8 @@
    How to use this book
   </a>
  </li>
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
+ <li class="toctree-l1">
+  <a class="reference internal" href="start.html">
    Start coding!
   </a>
  </li>
@@ -109,8 +109,8 @@
    Boilerplate code review
   </a>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="wrangle.html">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
    Data wrangling
   </a>
  </li>
@@ -180,7 +180,7 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="_sources/start.ipynb"><button type="button"
+        <a class="dropdown-buttons" href="_sources/wrangle.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
@@ -200,7 +200,7 @@
                 data-toggle="tooltip" data-placement="left" title="Source repository"><i
                     class="fab fa-github"></i>repository</button></a>
         <a class="issues-button"
-            href="https://github.com/EastBayEv/SSDS-TAML/issues/new?title=Issue%20on%20page%20%2Fstart.html&body=Your%20issue%20content%20here."><button
+            href="https://github.com/EastBayEv/SSDS-TAML/issues/new?title=Issue%20on%20page%20%2Fwrangle.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
         
@@ -221,7 +221,7 @@
         aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
     <div class="dropdown-buttons">
         
-        <a class="binder-button" href="https://mybinder.org/v2/gh/EastBayEv/SSDS-TAML/HEAD/v2/gh/EastBayEv/SSDS-TAML/master?urlpath=tree/start.ipynb"><button type="button"
+        <a class="binder-button" href="https://mybinder.org/v2/gh/EastBayEv/SSDS-TAML/HEAD/v2/gh/EastBayEv/SSDS-TAML/master?urlpath=tree/wrangle.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
                 data-placement="left"><img class="binder-button-logo"
                     src="_static/images/logo_binder.svg"
@@ -241,78 +241,6 @@
         <!-- Table of contents -->
         <div class="d-none d-md-block col-md-2 bd-toc show">
             
-            <div class="tocsection onthispage pt-5 pb-3">
-                <i class="fas fa-list"></i> Contents
-            </div>
-            <nav id="bd-toc-nav" aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#">
-   Start coding!
-  </a>
-  <ul class="visible nav section-nav flex-column">
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#right-click-the-launch-binder-button-below-and-open-it-in-a-new-browser-tab">
-     Right click the “Launch Binder” button below and open it in a new browser tab.
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#click-python-3-ipykernel">
-     Click “Python 3 (ipykernel)”
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#cells-are-code-by-default">
-   Cells are code by default
-  </a>
-  <ul class="visible nav section-nav flex-column">
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#run-the-code">
-     Run the code
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#insert-new-cells">
-     Insert new cells
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#switch-between-code-and-text-cells">
-     Switch between code and text cells
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#editing-a-markdown-cell">
-     Editing a markdown cell
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#save-your-work">
-     Save your work
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#close-and-halt">
-     Close and halt
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#run-these-materials-on-your-local-computer">
-     Run these materials on your local computer
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#git-clone">
-     git clone
-    </a>
-   </li>
-  </ul>
- </li>
-</ul>
-
-            </nav>
         </div>
     </div>
 </div>
@@ -321,88 +249,9 @@
         
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="start-coding">
-<h1>Start coding!<a class="headerlink" href="#start-coding" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="right-click-the-launch-binder-button-below-and-open-it-in-a-new-browser-tab">
-<h2>Right click the “Launch Binder” button below and open it in a new browser tab.<a class="headerlink" href="#right-click-the-launch-binder-button-below-and-open-it-in-a-new-browser-tab" title="Permalink to this headline">¶</a></h2>
-<p>Follow these instructions in JupyterLab to start a kernel, type and run a line of code, save and export your work, and end your session. The content in JupyterLab and the JupyterBook is identical.</p>
-<p><a class="reference external" href="https://mybinder.org/v2/gh/EastBayEv/SSDS-TAML/HEAD"><img alt="Binder" src="https://mybinder.org/badge_logo.svg" /></a></p>
-</div>
-<div class="section" id="click-python-3-ipykernel">
-<h2>Click “Python 3 (ipykernel)”<a class="headerlink" href="#click-python-3-ipykernel" title="Permalink to this headline">¶</a></h2>
-<p>Click “Python 3 (ipykernel) under the “Notebook” header to launch a blank notebook.
-<img alt="setkernel" src="_images/kernel.png" /></p>
-</div>
-</div>
-<div class="tex2jax_ignore mathjax_ignore section" id="cells-are-code-by-default">
-<h1>Cells are code by default<a class="headerlink" href="#cells-are-code-by-default" title="Permalink to this headline">¶</a></h1>
-<p>In the first cell, type:</p>
-<blockquote>
-<div><p>print(“Your Name Here”)</p>
-</div></blockquote>
-<div class="section" id="run-the-code">
-<h2>Run the code<a class="headerlink" href="#run-the-code" title="Permalink to this headline">¶</a></h2>
-<p>Press <code class="docutils literal notranslate"><span class="pre">shift</span> <span class="pre">+</span> <span class="pre">enter</span></code> in JupyterLab or your local Python Anaconda installation to execute the code.</p>
-</div>
-<div class="section" id="insert-new-cells">
-<h2>Insert new cells<a class="headerlink" href="#insert-new-cells" title="Permalink to this headline">¶</a></h2>
-<p>Click the “plus” button to insert a new cell. It can be found between the “save disk” and “scissors” icons.
-<img alt="addcell" src="_images/addcell.png" /></p>
-</div>
-<div class="section" id="switch-between-code-and-text-cells">
-<h2>Switch between code and text cells<a class="headerlink" href="#switch-between-code-and-text-cells" title="Permalink to this headline">¶</a></h2>
-<p>Switch between code and text cells by clicking the dropdown menu.
-<img alt="switch" src="_images/switch.png" /></p>
-</div>
-<div class="section" id="editing-a-markdown-cell">
-<h2>Editing a markdown cell<a class="headerlink" href="#editing-a-markdown-cell" title="Permalink to this headline">¶</a></h2>
-<p>Double-click a markdown cell to edit it. Press <code class="docutils literal notranslate"><span class="pre">shift</span> <span class="pre">+</span> <span class="pre">enter</span></code> to render the text.</p>
-<p>Go through the cells on this page and check out <a class="reference external" href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet">Markdown Cheatsheet</a> to explore formatting rules and shortcuts.</p>
-<p><img alt="toc" src="_images/toc.png" /></p>
-</div>
-<div class="section" id="save-your-work">
-<h2>Save your work<a class="headerlink" href="#save-your-work" title="Permalink to this headline">¶</a></h2>
-<p>Click the “disk” icon to save your work. Right-click the tab to give your notebook a name:</p>
-<p><img alt="rename" src="_images/rename.png" /></p>
-<ul class="simple">
-<li><p>Click “File” –&gt; “Download” to save your Jupyter Notebook (extension <code class="docutils literal notranslate"><span class="pre">.ipynb</span></code>) before exiting a Jupyter Lab session.</p></li>
-<li><p>There are many other options, take some time to explore the top menu and buttons.</p></li>
-</ul>
-<p><img alt="download" src="_images/dl.png" /></p>
-</div>
-<div class="section" id="close-and-halt">
-<h2>Close and halt<a class="headerlink" href="#close-and-halt" title="Permalink to this headline">¶</a></h2>
-<p>Safely close the notebook by clicking “File” –&gt; “Close and Halt” before closing your browser.</p>
-<p><img alt="closehalt" src="_images/close.png" /></p>
-<p>Local Python installation</p>
-<p>Despite the many cloud-based Python Jupyter Notebook solutions, it is always good to have a local installation on your own computer. Point your web browswer here to install Python Anaconda distribution 3.9 (as of January 2022): <a class="reference external" href="https://www.anaconda.com/products/individual">https://www.anaconda.com/products/individual</a></p>
-<ul class="simple">
-<li><p>Download the installation file for your operating system, open it, and follow the instructions to install.</p></li>
-<li><p>Once installation completes, open the application named “Anaconda Navigator”. It looks like this:</p></li>
-</ul>
-<p><img alt="navigator" src="_images/navigator.png" /></p>
-<ul class="simple">
-<li><p>Click the “Launch” button under either Jupyter Notebook or Jupyter Lab.</p></li>
-<li><p>Open the <code class="docutils literal notranslate"><span class="pre">.ipynb</span></code> notebook you just downloaded from JupyterLab in your local installation and repeat the steps above.</p></li>
-</ul>
-</div>
-<div class="section" id="run-these-materials-on-your-local-computer">
-<h2>Run these materials on your local computer<a class="headerlink" href="#run-these-materials-on-your-local-computer" title="Permalink to this headline">¶</a></h2>
-<p>Copy these materials for use on your local installation.</p>
-<ol class="simple">
-<li><p>Visit: <a class="reference external" href="https://github.com/EastBayEv/SSDS-TAML">https://github.com/EastBayEv/SSDS-TAML</a></p></li>
-<li><p>Click the green “Code” button
-<img alt="code" src="_images/code.png" /></p></li>
-<li><p>Click “Download ZIP”
-<img alt="zip" src="_images/zip.png" /></p></li>
-<li><p>Extract this folder someplace familiar such as your Desktop.</p></li>
-<li><p>Open Anaconda Navigator, launch JupyterLab, and navigate your directories to launch these notebooks.</p></li>
-</ol>
-</div>
-<div class="section" id="git-clone">
-<h2>git clone<a class="headerlink" href="#git-clone" title="Permalink to this headline">¶</a></h2>
-<p>Git users type: <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">clone</span> <span class="pre">https://github.com/EastBayEv/SSDS-TAML.git</span></code></p>
-</div>
+  <div class="tex2jax_ignore mathjax_ignore section" id="data-wrangling">
+<h1>Data wrangling<a class="headerlink" href="#data-wrangling" title="Permalink to this headline">¶</a></h1>
+<p><img alt="wrangle" src="_images/wrangle.png" /></p>
 </div>
 
     <script type="text/x-thebe-config">
@@ -435,19 +284,19 @@
 <div class='prev-next-bottom'>
     
     <div id="prev">
-        <a class="left-prev" href="how_to.html" title="previous page">
+        <a class="left-prev" href="boiler.html" title="previous page">
             <i class="prevnext-label fas fa-angle-left"></i>
             <div class="prevnext-info">
                 <p class="prevnext-label">previous</p>
-                <p class="prevnext-title">How to use this book</p>
+                <p class="prevnext-title">Boilerplate code review</p>
             </div>
         </a>
     </div>
      <div id="next">
-        <a class="right-next" href="boiler.html" title="next page">
+        <a class="right-next" href="viz.html" title="next page">
             <div class="prevnext-info">
                 <p class="prevnext-label">next</p>
-                <p class="prevnext-title">Boilerplate code review</p>
+                <p class="prevnext-title">Visualization essentials</p>
             </div>
             <i class="prevnext-label fas fa-angle-right"></i>
         </a>
