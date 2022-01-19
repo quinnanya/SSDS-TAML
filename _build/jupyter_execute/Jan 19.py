@@ -253,5 +253,5 @@ text = text.lower()
 # In[26]:
 
 
-text
+print(text)
 
